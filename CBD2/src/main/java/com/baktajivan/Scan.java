@@ -1,36 +1,37 @@
 package com.baktajivan;
+//import all package for future scalability
 import  java.util.*;
-
+//all scanner input and output operation happened here
 public class Scan {
     public static void scanner (){
         Scanner scan = new Scanner(System.in);  // Create a Scanner object
-        System.out.println("There is 3 different input required for 3 different operations, Please be aware of it."); //insert an integer number
-        //Task A
-        System.out.println("Task A, Palindrome and Reversed Number Input: "); //insert an integer number
-        int a=scan.nextInt();
-        ReversedInt reversedInt = new ReversedInt();
-        reversedInt.isPalindrome(a);
-        System.out.println("");
+        //Alert the user that there is 3 different input
+        System.out.println("There is 3 different input required for 3 different operations, Please be aware of it.");
 
-        //Task B
+        //Task A Operation
+        System.out.println("Task A, Palindrome and Reversed Number Input: "); //insert an integer number
+        int a=scan.nextInt();//receive the input
+        ReversedInt reversedInt = new ReversedInt();//create a constructor to send scanned input
+        reversedInt.isPalindrome(a);//pass the value through the constructor
+        System.out.println("");//to create a space in between lines
+
+        //Task B Operation
+        //create the constructor to send scanned input
         Vowel v = new Vowel();
         Consonant c = new Consonant();
         System.out.println("Task B, Vowel and Consonant, Enter a string : ");//insert a string value
-        String s=scan.nextLine();
+        String s=scan.nextLine();//receive the input
         System.out.println("Vowels in a string '"+s+"' are :");
-        v.vowels(s);
-        System.out.println("");
-        System.out.println("Conconant in a string '"+s+"' are :");
-        c.consonant(s);
-        System.out.println("");
+        v.vowels(s);//pass the value through the constructor
+        System.out.println("");//to create a space in between lines
+        System.out.println("Consonant in a string '"+s+"' are :");
+        c.consonant(s);//pass the value through the constructor
+        System.out.println("");//to create a space in between lines
 
-        //Task C
-        System.out.println("Task C, Enter Input for Alphabet Only Output : ");
-        String input = scan.nextLine();  // Read user input
-
+        //Task C Operation
+        System.out.println("Task C, Enter Input for Alphabet Only Output : ");//insert a string value
+        String input = scan.nextLine();// Read user input
         AlphabetOnly comp = new AlphabetOnly();//create new constructor to send scanned input
-        comp.Compute(input);//send the input to the method
-
-
-    }
-}
+        comp.Compute(input);//pass the value through the constructor
+    }//method end
+}//class end
